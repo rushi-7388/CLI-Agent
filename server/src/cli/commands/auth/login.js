@@ -205,8 +205,8 @@ export async function loginAction(opts){
 }
 
 
-async function pollForToken(authClient, deviceCode, clientId, initialInternalValue) {
-    let pollingInterval = initialInternalValue
+async function pollForToken(authClient, deviceCode, clientId, initialInterval) {
+    let pollingInterval = initialInterval
     const spinner = yoctoSpinner({text:"", color:"cyan"});
     let dots = 0;
 

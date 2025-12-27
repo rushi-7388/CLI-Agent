@@ -8,6 +8,7 @@ import {Command} from "commander";
 import { login } from "./commands/auth/login.js";
 import { logout } from "./commands/auth/login.js";
 import { whoami } from "./commands/auth/login.js";
+import { wakeUp } from "./commands/ai/wakeup.js";
 
 dotenv.config();
 
@@ -28,7 +29,8 @@ async function main() {
     program.version("1.0.0").description("CLI Agent - A powerful CLI tool")
     .addCommand(login)
     .addCommand(logout)
-    .addCommand(whoami);
+    .addCommand(whoami)
+    .addCommand(wakeUp);
 
     program.action(() => {
         program.help()
